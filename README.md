@@ -10,12 +10,16 @@ The Nubot Simulator is a tool built to help researchers model their Nubot config
 ======
 Open the directory in Eclipse. Choose Export>Runnable JAR file>Package required libraries into generated JAR>Finish
 To compile manually, note that you need the JDK, not just the JRE (not included by default in OS X), and you need to explicitly tell the compiler to include the JARs inside the lib folder in the classpath:
+```
 cd src
 javac -cp ../lib/monte-cc.jar:../lib/javatuples-1.2-javadoc.jar:../lib/javatuples-1.2.jar: -d ../classes Main.java
+```
 If you do it manually, you also need to explicitly give the classpath when you run the program (otherwise it will load, but crash when you try to load a ruleset:
+```
 java -cp ../lib/monte-cc.jar:../lib/javatuples-1.2-javadoc.jar:../lib/javatuples-1.2.jar: Main   
+```
 
-### Running the Simulator
+###Running the Simulator
 ======
 Double click on Nubot-Simulator.jar (unless you have compiled by hand, in which case you will need to run from the command line (see above)
 
@@ -25,6 +29,7 @@ You are not allowed to start the simulation until both the configuration and rul
 
 ####Loading a Configuration
 ======
+
 One of the first things you'll want to do in order to simulate a system is load the seed configuration file. The simulator uses its own format and extension.
 
 The configuration file format ends with the .conf extension and looks something like this:
