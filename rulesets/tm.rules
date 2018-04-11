@@ -1,0 +1,5 @@
+q 0 1 SW q 0 1 SE
+q 0 1 SE p* 1 1 SE
+p* 0 0 SW p** 0 1 SW
+p* 1 0 SW p** 1 1 SW
+p** 0 1 SE p 0 0 SE

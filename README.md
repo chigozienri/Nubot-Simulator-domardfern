@@ -6,6 +6,19 @@ The Nubot Simulator is a tool built to help researchers model their Nubot config
 * Simulation Speed Changes
 * Configuration Editing
 
+###Compiling the Simulator
+======
+Open the directory in Eclipse. Choose Export>Runnable JAR file>Package required libraries into generated JAR>Finish
+To compile manually, note that you need the JDK, not just the JRE (not included by default in OS X), and you need to explicitly tell the compiler to include the JARs inside the lib folder in the classpath:
+cd src
+javac -cp ../lib/monte-cc.jar:../lib/javatuples-1.2-javadoc.jar:../lib/javatuples-1.2.jar: -d ../classes Main.java
+If you do it manually, you also need to explicitly give the classpath when you run the program (otherwise it will load, but crash when you try to load a ruleset:
+java -cp ../lib/monte-cc.jar:../lib/javatuples-1.2-javadoc.jar:../lib/javatuples-1.2.jar: Main   
+
+### Running the Simulator
+======
+Double click on Nubot-Simulator.jar (unless you have compiled by hand, in which case you will need to run from the command line (see above)
+
 ###Using the Simulator
 ======
 You are not allowed to start the simulation until both the configuration and ruleset files are loaded. However, in the case of testing a system that uses only agitation, you may simulate as long as a configuration is loaded and agitation is turned on.
@@ -29,7 +42,7 @@ Bonds between monomers are specified under the 'Bonds:' directive following the 
 
 Bond Types: 0 - null, 1 - rigid, 2 - flexible.
 
-Example: [wiggles.conf]("http://faculty.utpa.edu/orgs/asarg/examples/wiggles.conf")
+Example: rulesets/walker.conf
 
 ####Loading a Ruleset
 ======
@@ -41,6 +54,6 @@ The ruleset file format ends with the .rules extension and more closely follows 
 M1.state M2.state bondTYPE Direction M1'.state M2'.state bondTYPE' Direction'
 ```
 
-Directions: N, NE, E, SE, S, SW, W, NW
+Directions: NE, E, SE, SW, W, NW
 
-Example: [wiggles.rules]("http://faculty.utpa.edu/orgs/asarg/examples/wiggles.rules")
+Example: rulesets/walker.rules
