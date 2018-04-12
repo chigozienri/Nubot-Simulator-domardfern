@@ -1,3 +1,7 @@
+Note: I forked this from https://github.com/domardfern/Nubot-Simulator. However, I have found a more recently maintained fork of this project here: https://github.com/danielthank/nubot-simulator
+so I am abandoning and archiving this fork, and starting again with a new fork at https://github.com/chigozienri/nubot-simulator based on danielthank's fork.
+
+
 ###Nubot Simulator
 ======
 The Nubot Simulator is a tool built to help researchers model their Nubot configurations and rulesets. This simulator has a number of features including but not limited to:
